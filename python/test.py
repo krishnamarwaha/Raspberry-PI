@@ -1,0 +1,1 @@
+run sense_hat

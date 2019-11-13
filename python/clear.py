@@ -1,0 +1,2 @@
+sense.clear
+sense = SenseHat()
