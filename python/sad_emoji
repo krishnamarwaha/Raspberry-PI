@@ -1,0 +1,24 @@
+from sense_hat import SenseHat
+
+sense = SenseHat()
+
+b = (128,255,255)
+r = (255,0,0)
+w = (0,0,0)
+d = (0,0,128)
+
+sad = [
+      b,b,b,b,b,b,b,b,
+      b,r,r,w,w,r,r,b,
+      b,r,r,w,w,r,r,b,
+      b,d,d,w,w,d,d,b,
+      b,d,d,w,w,d,d,b,
+      b,d,d,r,r,d,d,b,
+      b,d,r,r,r,r,d,b,
+      b,b,b,b,b,b,b,b
+      ]
+sense.set_pixels(sad)
+
+
+
+      
