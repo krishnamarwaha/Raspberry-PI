@@ -107,7 +107,7 @@ def parse_response(json_response):
         if ( happy_string == "POSSIBLE" or happy_string == "LIKELY" or happy_string == "VERY_LIKELY"):
             sense.set_pixels(happy)
 
-        if ( angry_string == "POSSIBLE" or angry_string == "LIKELY" or angry_string == "VERY_LIKELY"):
+        if ( anger_string == "POSSIBLE" or anger_string == "LIKELY" or anger_string == "VERY_LIKELY"):
             sense.set_pixels(angry)
 
         if ( surprise_string == "POSSIBLE" or surprise_string == "LIKELY" or surprise_string == "VERY_LIKELY"):
