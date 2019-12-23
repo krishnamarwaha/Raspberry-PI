@@ -1,0 +1,6 @@
+COLOR PALLET EQUALS
+black = white 
+white = red
+red = black
+
+for pallet inky what 
