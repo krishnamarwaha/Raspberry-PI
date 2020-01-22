@@ -1,0 +1,2 @@
+export GOOGLE_APPLICATION_CREDENTIALS=/home/pi/RasberryPIVision-b4ffb326dce6.json
+python emotion_detector.py
