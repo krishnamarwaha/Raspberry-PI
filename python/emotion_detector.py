@@ -4,7 +4,6 @@ from googleapiclient import discovery
 from oauth2client.client import GoogleCredentials
 
 import argparse
-import urllib2
 import base64
 import json
 import time
@@ -81,6 +80,7 @@ suprised = [
 
 def parse_response(json_response):
     # print json_response
+    print("google checed")
     try:
         # print json.dumps(response, indent=4, sort_keys=True)	#Print it out and make it somewhat pretty.
         anger = json_response['responses'][0]['faceAnnotations'][0]['angerLikelihood']
