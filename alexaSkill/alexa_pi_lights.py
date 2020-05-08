@@ -48,6 +48,7 @@ def launch():
 
 @ask.intent('GpioIntent', mapping = {'status':'status'})
 def Gpio_Intent(status,room):
+    print( 'status is ' + status)
     if status in STATUSON:
         off = Color(0,0,0)
         red = Color(255,0,0)
@@ -57,6 +58,48 @@ def Gpio_Intent(status,room):
         return statement('turning {} lights'.format(status))
     elif status in STATUSOFF:
         off = Color(0,0,0)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i,off)
+        strip.show()
+        return statement('turning {} lights'.format(status))
+    elif status in ['green']:
+        off = Color(0,255,0)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i,off)
+        strip.show()
+        return statement('turning {} lights'.format(status))
+    elif status in ['blue']:
+        off = Color(0,0,255)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i,off)
+        strip.show()
+        return statement('turning {} lights'.format(status))    
+    elif status in ['red']:
+        off = Color(255,0,0)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i,off)
+        strip.show()
+        return statement('turning {} lights'.format(status))    
+    elif status in ['off']:
+        off = Color(0,0,0)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i,off)
+        strip.show()
+        return statement('turning {} lights'.format(status))
+    elif status in ['yellow']:
+        off = Color(255,242,0)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i,off)
+        strip.show()
+        return statement('turning {} lights'.format(status))     
+    elif status in ['purple']:
+        off = Color(104,11,155)
+        for i in range(strip.numPixels()):
+            strip.setPixelColor(i,off)
+        strip.show()
+        return statement('turning {} lights'.format(status))
+    elif status in ['pink']:
+        off = Color(255,128,192)
         for i in range(strip.numPixels()):
             strip.setPixelColor(i,off)
         strip.show()
