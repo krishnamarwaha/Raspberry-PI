@@ -5,7 +5,6 @@ from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 import time
 import json
-from enviroplus import gas
 from pms5003 import PMS5003, ReadTimeoutError
 from enviroplus import gas
 from bme280 import BME280
