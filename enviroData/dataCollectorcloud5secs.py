@@ -5,6 +5,7 @@ from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 import time
 import json
+from enviroplus import gas
 from pms5003 import PMS5003, ReadTimeoutError
 from enviroplus import gas
 from bme280 import BME280
@@ -62,6 +63,7 @@ try:
             fields['pm_1'] = pm_readings.pm_ug_per_m3(1)
             fields['pm_2.5'] = pm_readings.pm_ug_per_m3(2.5)
             fields['pm_10'] = pm_readings.pm_ug_per_m3(10)
+            fields['gas'] = gas_readings
             data['fields'] = fields
             j = [data]
             print(j)
